@@ -4,6 +4,7 @@ import cn.edu.nju.jungle.data.PeriodData;
 import cn.edu.nju.jungle.plan.BuyPlan;
 import cn.edu.nju.jungle.ui.UIManager;
 import jadex.bdiv3.BDIAgent;
+import jadex.bdiv3.annotation.Belief;
 import jadex.bdiv3.annotation.Plan;
 import jadex.bdiv3.annotation.Body;
 import jadex.bdiv3.annotation.Plans;
@@ -28,6 +29,8 @@ public class Customer1BDI {
     }
     @Agent
     BDIAgent agent;
+    @Belief
+    boolean reposFull = false;
     @AgentBody
     public void body(){
         while(PeriodData.periodCount<PeriodData.MAX_PERIOD_LIMIT){
