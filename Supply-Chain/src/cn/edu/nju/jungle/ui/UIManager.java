@@ -60,8 +60,6 @@ public class UIManager {
     }
     public static void showFrame(){
         SwingUtilities.invokeLater(new Runnable() {
-            
-            @Override
             public void run() {
                 mainFrame.setVisible(true);
             }

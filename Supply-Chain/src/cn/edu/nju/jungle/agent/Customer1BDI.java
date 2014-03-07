@@ -37,14 +37,10 @@ public class Customer1BDI {
             agent.waitForDelay(200).get();
             PeriodData.periodCount++;
             agent.adoptPlan(new BuyPlan()).addResultListener(new IResultListener<Object>() {
-                
-                @Override
                 public void resultAvailable(Object arg0) {
                     int t = (Integer) arg0;
                     UIManager.updateTextLabel(t);
                 }
-                
-                @Override
                 public void exceptionOccurred(Exception arg0) {
                     
                 }
