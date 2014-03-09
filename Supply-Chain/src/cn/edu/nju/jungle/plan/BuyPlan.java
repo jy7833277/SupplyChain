@@ -87,7 +87,7 @@ public class BuyPlan {
          return x;
     }
     private double poissonRand(double lamda){
-        double x=0,b=1,c=Math.exp(-lamda),u; 
+        double x=0,b=1,c=Math.exp(-lamda),u;
         while(b>=c){
             u=Math.random();
             b *=u;
